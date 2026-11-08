@@ -1,0 +1,450 @@
+/* =================================
+   GENERAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --burgundy: #641E3A;
+    --dark-burgundy: #481329;
+    --light-burgundy: #873B58;
+    --white: #FFFFFF;
+    --background: #F8F4F5;
+    --text: #333333;
+    --muted: #686868;
+    --border: #E8DDE2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+
+/* =================================
+   HEADER AND NAVIGATION
+================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 24px 7%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    color: var(--burgundy);
+    font-size: 21px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--burgundy);
+}
+
+
+/* =================================
+   COMMON HEADINGS
+================================= */
+
+.eyebrow {
+    color: var(--burgundy);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+h2 span {
+    color: var(--burgundy);
+}
+
+.page-intro {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: var(--muted);
+}
+
+
+/* =================================
+   HOME PAGE
+================================= */
+
+.home {
+    min-height: 72vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 20px;
+    background-color: var(--background);
+}
+
+.home h2 {
+    font-size: 44px;
+    color: var(--text);
+}
+
+.home h2 span {
+    color: var(--burgundy);
+}
+
+.home h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: var(--burgundy);
+}
+
+.intro {
+    max-width: 600px;
+    margin-bottom: 25px;
+    color: var(--muted);
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.btn {
+    display: inline-block;
+    background-color: var(--burgundy);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 23px;
+    margin: 8px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--light-burgundy);
+}
+
+.btn-light {
+    background-color: var(--white);
+    color: var(--burgundy);
+    border: 1px solid var(--burgundy);
+}
+
+.btn-light:hover {
+    background-color: var(--burgundy);
+    color: var(--white);
+}
+
+
+/* =================================
+   ABOUT PAGE
+================================= */
+
+.content {
+    max-width: 1100px;
+    width: 90%;
+    margin: 55px auto;
+    text-align: center;
+}
+
+.about-card {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 35px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.about-card h3 {
+    color: var(--burgundy);
+    margin: 15px 0 10px;
+}
+
+.about-card p {
+    margin-bottom: 15px;
+}
+
+
+/* =================================
+   SKILLS PAGE
+================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    text-align: left;
+    margin-top: 35px;
+}
+
+.skill-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(100, 30, 58, 0.10);
+}
+
+.skill-card h3 {
+    color: var(--burgundy);
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   PROJECTS PAGE
+================================= */
+
+.project-section {
+    max-width: 1150px;
+    width: 90%;
+    margin: 55px auto;
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.project-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 27px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 20px rgba(100, 30, 58, 0.10);
+}
+
+.project-card h3 {
+    color: var(--burgundy);
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.project-card .technology {
+    color: var(--burgundy);
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+
+/* =================================
+   CONTACT PAGE
+================================= */
+
+.contact-section {
+    max-width: 900px;
+    width: 90%;
+    min-height: 70vh;
+    margin: 55px auto;
+    text-align: center;
+}
+
+.contact-card {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 35px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.contact-card h3 {
+    color: var(--burgundy);
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    margin-bottom: 18px;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a:not(.btn) {
+    color: var(--burgundy);
+    text-decoration: none;
+}
+
+.contact-card a:not(.btn):hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   CONTACT FORM
+================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid var(--burgundy);
+}
+
+button {
+    background-color: var(--burgundy);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--light-burgundy);
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    padding: 22px 15px;
+    background-color: var(--white);
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 35px;
+}
+
+
+/* =================================
+   TABLET RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-direction: column;
+        padding: 22px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .project-container,
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =================================
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 560px) {
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    nav {
+        gap: 12px 16px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .home {
+        padding: 70px 18px;
+    }
+
+    .home h2 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 29px;
+    }
+
+    .content,
+    .project-section,
+    .contact-section {
+        width: 92%;
+        margin: 35px auto;
+    }
+
+    .project-container,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card,
+    .skill-card,
+    .about-card,
+    .contact-card {
+        padding: 22px;
+    }
+}
